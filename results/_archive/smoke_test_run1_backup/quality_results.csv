@@ -1,0 +1,2 @@
+Model,Dataset,Num_Samples,Max_Length,Stride,Total_Tokens,Total_UTF8_Bytes,Perplexity,BPB,Total_NLL_nats,Avg_NLL_per_token,Strict_VRAM_Cap_MB,Within_6GB_Cap
+Pythia-410M,PG-19 (test),1,512,256,5879,25000,14.0795,0.8973,15548.3079,2.6447,5800.0,True

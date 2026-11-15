@@ -1,0 +1,2 @@
+Model,Batch,Sequence_Length,Peak_Allocated_VRAM_MB,Peak_Reserved_VRAM_MB,Static_Weight_MB,Additional_Overhead_MB,Persistent_State_MB,State_Logical_MB,Throughput_tokens_per_sec,Latency_sec,Latency_std_sec,ms_per_token,Strict_VRAM_Cap_MB,Within_6GB_Cap
+Pythia-410M,1,512,1942.63,1980.0,1650.38,100.25,192.0,96.0,4144.94,0.1235,0.0,0.2413,5800.0,True

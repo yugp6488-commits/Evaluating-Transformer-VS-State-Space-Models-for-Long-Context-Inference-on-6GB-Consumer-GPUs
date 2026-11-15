@@ -1,0 +1,18 @@
+Task,Target_Seq_Len,Regime,Pythia_Exact_Match,Pythia_95_CI,Pythia_Partial_Credit,Mamba_Exact_Match,Mamba_95_CI,Mamba_Partial_Credit,Comparison
+passkey,512,In-Distribution,0.8667,"[0.6212, 0.9626]",0.8667 (partial credit),0.4000,"[0.1982, 0.6425]",0.4000 (partial credit),CIs overlap
+passkey,1024,In-Distribution,1.0000,"[0.7961, 1.0000]",1.0000 (partial credit),0.4667,"[0.2481, 0.6988]",0.4667 (partial credit),CIs disjoint
+passkey,2048,In-Distribution,1.0000,"[0.7961, 1.0000]",1.0000 (partial credit),0.3333,"[0.1518, 0.5829]",0.3333 (partial credit),CIs disjoint
+passkey,4096,Extrapolation,0.0000,"[0.0000, 0.2039]",0.0000 (partial credit),0.5333,"[0.3012, 0.7519]",0.5333 (partial credit),CIs disjoint
+passkey,8192,Extrapolation,OOM (n=15 failed),N/A (OOM),N/A (OOM),0.0000,"[0.0000, 0.2039]",0.0000 (partial credit),CIs disjoint
+needle_in_haystack,512,In-Distribution,1.0000,"[0.7961, 1.0000]",1.0000 (partial credit),1.0000,"[0.7961, 1.0000]",1.0000 (partial credit),CIs overlap
+needle_in_haystack,1024,In-Distribution,1.0000,"[0.7961, 1.0000]",1.0000 (partial credit),1.0000,"[0.7961, 1.0000]",1.0000 (partial credit),CIs overlap
+needle_in_haystack,2048,In-Distribution,1.0000,"[0.7961, 1.0000]",1.0000 (partial credit),0.8000,"[0.5481, 0.9295]",0.9600 (partial credit),CIs overlap
+needle_in_haystack,4096,Extrapolation,0.0000,"[0.0000, 0.2039]",0.0000 (partial credit),0.8000,"[0.5481, 0.9295]",0.8400 (partial credit),CIs disjoint
+needle_in_haystack,8192,Extrapolation,OOM (n=15 failed),N/A (OOM),N/A (OOM),0.0667,"[0.0119, 0.2982]",0.3067 (partial credit),CIs disjoint
+associative_recall,512,In-Distribution,0.0667,"[0.0119, 0.2982]",0.0667 (partial credit),0.2667,"[0.1090, 0.5195]",0.2667 (partial credit),CIs overlap
+associative_recall,1024,In-Distribution,0.0000,"[0.0000, 0.2039]",0.0000 (partial credit),0.4000,"[0.1982, 0.6425]",0.4000 (partial credit),CIs overlap
+associative_recall,2048,In-Distribution,0.0000,"[0.0000, 0.2039]",0.0000 (partial credit),0.2000,"[0.0705, 0.4519]",0.2000 (partial credit),CIs overlap
+associative_recall,4096,Extrapolation,0.0000,"[0.0000, 0.2039]",0.0000 (partial credit),0.0000,"[0.0000, 0.2039]",0.0000 (partial credit),CIs overlap
+associative_recall,8192,Extrapolation,OOM (n=15 failed),N/A (OOM),N/A (OOM),0.0000,"[0.0000, 0.2039]",0.0000 (partial credit),CIs disjoint
+ALL_TASKS_AGGREGATE,0,In-Distribution (<=2048),"0.6593 (n=135, OOM=0)","[0.5759, 0.7338]",0.6593 (partial credit),"0.5407 (n=135, OOM=0)","[0.4567, 0.6225]",0.5585 (partial credit),CIs overlap
+ALL_TASKS_AGGREGATE,0,Extrapolation (>2048),"0.0000 (n=45, OOM=45)","[0.0000, 0.0787]",0.0000 (partial credit),"0.2333 (n=90, OOM=0)","[0.1580, 0.3305]",0.2800 (partial credit),CIs disjoint

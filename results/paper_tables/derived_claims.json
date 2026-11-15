@@ -1,0 +1,36 @@
+{
+  "decode_latency_growth_pythia_512_to_4096_ratio": 2.4687,
+  "decode_latency_growth_pythia_512_to_4096_str": "2.47x",
+  "mamba_decode_latency_mean_ms": 23.2595,
+  "mamba_decode_latency_std_ms": 0.2825,
+  "first_seq_len_mamba_decode_throughput_exceeds_pythia": 2048,
+  "prefill_throughput_pythia_tps": {
+    "512": 5514.17,
+    "4096": 2941.75
+  },
+  "prefill_throughput_mamba_tps": {
+    "512": 4824.63,
+    "8192": 5273.8
+  },
+  "phase3_oom_counts": {
+    "Pythia-410M": "6/15",
+    "Mamba-370M": "1/15"
+  },
+  "serving_envelope_ratios": {
+    "batch_1": {
+      "pythia_max_seq_len": 4096,
+      "mamba_max_seq_len": 8192,
+      "ratio": 2.0
+    },
+    "batch_2": {
+      "pythia_max_seq_len": 2048,
+      "mamba_max_seq_len": 8192,
+      "ratio": 4.0
+    },
+    "batch_4": {
+      "pythia_max_seq_len": 1024,
+      "mamba_max_seq_len": 4096,
+      "ratio": 4.0
+    }
+  }
+}

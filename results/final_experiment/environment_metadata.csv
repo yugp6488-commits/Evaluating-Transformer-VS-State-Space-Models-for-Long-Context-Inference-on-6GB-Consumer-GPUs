@@ -1,0 +1,2 @@
+timestamp,platform,python_version,torch_version,cuda_available,gpu_name,gpu_count,gpu_total_vram_mb,cuda_version,cudnn_version,cudnn_enabled,transformers_version,mamba_ssm_version,system_ram_total_gb,system_ram_available_gb,cpu_percent,cpu_count_physical,cpu_count_logical
+2026-11-15T15:41:32.723410,Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35,3.10.12,2.5.1+cu121,True,NVIDIA GeForce RTX 3050 6GB Laptop GPU,1,6143.50,12.1,90100,True,4.45.2,2.2.2,11.54,10.82,0.3,8,16

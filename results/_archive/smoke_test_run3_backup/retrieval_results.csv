@@ -1,0 +1,2 @@
+Model,Task,Sequence_Length,Target_Position_Pct,Actual_Needle_Position_Pct,Actual_Processed_Tokens,Is_Extrapolation,Accuracy,Exact_Match_Rate,Trial_Details,Strict_VRAM_Cap_MB,Within_Allocator_Cap
+Pythia-410M,passkey,512,0.5,0.4727,512,False,1.0,1.0,"t0:exact=True,score=1.00,tok=512,needlePct=0.4727",5800.0,True

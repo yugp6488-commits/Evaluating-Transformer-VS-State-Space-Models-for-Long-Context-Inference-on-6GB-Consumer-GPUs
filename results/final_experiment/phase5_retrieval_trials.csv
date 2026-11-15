@@ -1,0 +1,451 @@
+Model,Task,Target_Seq_Len,Actual_Tokens,Requested_Pos_Pct,Actual_Needle_Pos_Pct,Trial_Index,Trial_Seed,Is_Extrapolation,Expected_Answer,Predicted_Answer,Exact_Match,Partial_Score,Status
+Pythia-410M,passkey,512,512,0.0,0.0,0,554,False,77550, 77550. Remember this number. nor do they pause for human contemplation. Every s,True,1.0,SUCCESS
+Pythia-410M,passkey,512,512,0.0,0.0,1,10554,False,78975, 78975. The secret passkey is 78975. The secret passkey is 789,True,1.0,SUCCESS
+Pythia-410M,passkey,512,512,0.0,0.0,2,20554,False,26424," 26424. Remember this number. In the quiet corridors of the archival library, fo",True,1.0,SUCCESS
+Pythia-410M,passkey,512,512,0.25,0.2363,0,579,False,51425," 51425. Remember this number. All that glitters is not gold, yet it frequently c",True,1.0,SUCCESS
+Pythia-410M,passkey,512,512,0.25,0.2363,1,10579,False,94205, 94205. Remember this number.ational efficiency depends profoundly on memory hie,True,1.0,SUCCESS
+Pythia-410M,passkey,512,512,0.25,0.2363,2,20579,False,52637,  52637  The secret passkey is 52637  The secret passkey is,True,1.0,SUCCESS
+Pythia-410M,passkey,512,512,0.5,0.4727,0,604,False,18403,  18403. Remember this number. under analysis.  The secret passkey is:,True,1.0,SUCCESS
+Pythia-410M,passkey,512,512,0.5,0.4727,1,10604,False,26561,  The number of the year.  The number of the month.  The number,False,0.0,SUCCESS
+Pythia-410M,passkey,512,512,0.5,0.4727,2,20604,False,68450,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Pythia-410M,passkey,512,512,0.75,0.709,0,629,False,17075,  17075  The secret passkey is:  17075  The secret,True,1.0,SUCCESS
+Pythia-410M,passkey,512,512,0.75,0.709,1,10629,False,14815,  The secret passkey is 14815. Remember this number. sea level. Electromagnetic ,True,1.0,SUCCESS
+Pythia-410M,passkey,512,512,0.75,0.709,2,20629,False,94376, 94376. Remember this number. single deliberate step forward. To be or not to be,True,1.0,SUCCESS
+Pythia-410M,passkey,512,512,1.0,0.9434,0,654,False,96487,  96487  The secret passkey is 96487.  The secret,True,1.0,SUCCESS
+Pythia-410M,passkey,512,512,1.0,0.9453,1,10654,False,27349,  The secret passkey is 27349.  The secret passkey is 27349.,True,1.0,SUCCESS
+Pythia-410M,passkey,512,512,1.0,0.9453,2,20654,False,68079,  The secret passkey is 68079.  The secret passkey is:  ,True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,0.0,0.0,0,1066,False,68687, 68687. Remember this number. The lazy dog in the tranquil afternoon. A journey ,True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,0.0,0.0,1,11066,False,24712, 24712. The secret passkey is 24712. The secret passkey is 24712. The,True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,0.0,0.0,2,21066,False,72239, 72239. Remember this number. Under analysis. The quick brown fox jumps over the,True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,0.25,0.2432,0,1091,False,57125, 57125. Remember this number. The enduring philosophical question. All that glit,True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,0.25,0.2432,1,11091,False,48863, 48863. Remember this number. speed of light. Computational efficiency depends p,True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,0.25,0.2432,2,21091,False,67292," 67292. Remember this number. for no man, nor do they pause for human contemplat",True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,0.5,0.4863,0,1116,False,85225, 85225. Remember this number. from the proper angle. Rigorous practice fosters m,True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,0.5,0.4863,1,11116,False,96903," 96903. Remember this number. and tide wait for no man, nor do they pause for",True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,0.5,0.4863,2,21116,False,77517, 77517. Remember this number. carries subtle light if observed from the proper a,True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,0.75,0.7285,0,1141,False,62821,"  The secret passkey is 62821. Remember this number. not to be, that",True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,0.75,0.7295,1,11141,False,25614,  25614. Remember this number. the ancient city. Atmospheric pressure decreases ,True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,0.75,0.7295,2,21141,False,32203,  The secret passkey is 32203. Remember this number. The ethical application of ,True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,1.0,0.9727,0,1166,False,95696,  The secret passkey is 95696.  The secret passkey is 95696.,True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,1.0,0.9727,1,11166,False,45894,  The secret passkey is 45894.  The secret passkey is:  ,True,1.0,SUCCESS
+Pythia-410M,passkey,1024,1024,1.0,0.9727,2,21166,False,14839,  The secret passkey is 14839.  The secret passkey is 14839.,True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,0.0,0.0,0,2090,False,42707, 42707. Remember this number. Electromagnetic radiation travels through the vacu,True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,0.0,0.0,1,12090,False,89848, 89848.  What is the secret passkey mentioned above? The passkey is:,True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,0.0,0.0,2,22090,False,55365, 55365. Remember this number. The ancient city. Atmospheric pressure decreases s,True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,0.25,0.2466,0,2115,False,56370,  56370.  The secret passkey is:  56370.  ,True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,0.25,0.2466,1,12115,False,27261, 27261. Remember this number.. The quick brown fox jumps over the lazy dog in th,True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,0.25,0.2466,2,22115,False,36744, 36744. Remember this number.. Atmospheric pressure decreases systematically as ,True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,0.5,0.4932,0,2140,False,85049," 85049. Remember this number. be, that remains the enduring philosophical questi",True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,0.5,0.4932,1,12140,False,45995," 45995. Remember this number., though ultimate perfection remains aspirational. ",True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,0.5,0.4932,2,22140,False,87817," 87817. Remember this number. The early bird catches the worm, but the second mo",True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,0.75,0.7397,0,2165,False,75334," 75334. Remember this number. To be or not to be, that remains the enduring phil",True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,0.75,0.7397,1,12165,False,44239,  The secret passkey is 44239. Remember this number.  The secret passkey,True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,0.75,0.7393,2,22165,False,71917,  The secret passkey is 71917.  The secret passkey is 719,True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,1.0,0.9858,0,2190,False,86230,  The secret passkey is 86230.  The secret passkey is 862,True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,1.0,0.9863,1,12190,False,42392,  The secret passkey is 42392.  The secret passkey is 42392.,True,1.0,SUCCESS
+Pythia-410M,passkey,2048,2048,1.0,0.9863,2,22190,False,82092,  The secret passkey is 82092.  The secret passkey is:  ,True,1.0,SUCCESS
+Pythia-410M,passkey,4096,4096,0.0,0.0,0,4138,False,80131,                    ,False,0.0,SUCCESS
+Pythia-410M,passkey,4096,4096,0.0,0.0,1,14138,False,19779,              .ot. . ,False,0.0,SUCCESS
+Pythia-410M,passkey,4096,4096,0.0,0.0,2,24138,False,56736,                    ,False,0.0,SUCCESS
+Pythia-410M,passkey,4096,4096,0.25,0.2483,0,4163,False,77852,"        .   c.""cast   .",False,0.0,SUCCESS
+Pythia-410M,passkey,4096,4096,0.25,0.2483,1,14163,False,72677,c.                . ,False,0.0,SUCCESS
+Pythia-410M,passkey,4096,4096,0.25,0.2483,2,24163,False,45374,               astubb. ,False,0.0,SUCCESS
+Pythia-410M,passkey,4096,4096,0.5,0.4966,0,4188,False,92296,              .     ,False,0.0,SUCCESS
+Pythia-410M,passkey,4096,4096,0.5,0.4966,1,14188,False,57421,       ast-         . ,False,0.0,SUCCESS
+Pythia-410M,passkey,4096,4096,0.5,0.4966,2,24188,False,49120,                    ,False,0.0,SUCCESS
+Pythia-410M,passkey,4096,4096,0.75,0.7446,0,4213,False,89729,              .c.s.y,False,0.0,SUCCESS
+Pythia-410M,passkey,4096,4096,0.75,0.7449,1,14213,False,18084,ting.tinges.               ,False,0.0,SUCCESS
+Pythia-410M,passkey,4096,4096,0.75,0.7446,2,24213,False,66463,an            .ber    le,False,0.0,SUCCESS
+Pythia-410M,passkey,4096,4096,1.0,0.9932,0,4238,False,44553,            c-  yle.le,False,0.0,SUCCESS
+Pythia-410M,passkey,4096,4096,1.0,0.9932,1,14238,False,54066,for.to-                ,False,0.0,SUCCESS
+Pythia-410M,passkey,4096,4096,1.0,0.9932,2,24238,False,44635,an    c.Wcag cast   ast.cast,False,0.0,SUCCESS
+Pythia-410M,passkey,8192,8192,0.0,0.0,0,8234,False,19806,OOM,False,0.0,OOM
+Pythia-410M,passkey,8192,8192,0.0,0.0,1,18234,False,87691,OOM,False,0.0,OOM
+Pythia-410M,passkey,8192,8192,0.0,0.0,2,28234,False,61995,OOM,False,0.0,OOM
+Pythia-410M,passkey,8192,8192,0.25,0.2491,0,8259,False,33697,OOM,False,0.0,OOM
+Pythia-410M,passkey,8192,8192,0.25,0.2491,1,18259,False,63267,OOM,False,0.0,OOM
+Pythia-410M,passkey,8192,8192,0.25,0.2491,2,28259,False,55195,OOM,False,0.0,OOM
+Pythia-410M,passkey,8192,8192,0.5,0.4983,0,8284,False,29444,OOM,False,0.0,OOM
+Pythia-410M,passkey,8192,8192,0.5,0.4983,1,18284,False,41266,OOM,False,0.0,OOM
+Pythia-410M,passkey,8192,8192,0.5,0.4983,2,28284,False,76547,OOM,False,0.0,OOM
+Pythia-410M,passkey,8192,8192,0.75,0.7474,0,8309,False,61461,OOM,False,0.0,OOM
+Pythia-410M,passkey,8192,8192,0.75,0.7474,1,18309,False,70256,OOM,False,0.0,OOM
+Pythia-410M,passkey,8192,8192,0.75,0.7473,2,28309,False,71805,OOM,False,0.0,OOM
+Pythia-410M,passkey,8192,8192,1.0,0.9966,0,8334,False,50082,OOM,False,0.0,OOM
+Pythia-410M,passkey,8192,8192,1.0,0.9966,1,18334,False,15534,OOM,False,0.0,OOM
+Pythia-410M,passkey,8192,8192,1.0,0.9965,2,28334,False,85325,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,512,512,0.0,0.0,0,554,False,peregrine falcon lives in Montreal," peregrine falcon lives in Montreal. represents power, and wisdom guides the eth",True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,512,512,0.0,0.0,1,10554,False,peregrine falcon lives in Montreal," peregrine falcon lives in Montreal. man, nor do they pause for human contemplat",True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,512,512,0.0,0.0,2,20554,False,golden eagle lives in Zurich," golden eagle lives in Zurich. archival library, forgotten histories sleep. Time",True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,512,512,0.25,0.2324,0,579,False,golden eagle lives in Reykjavik, golden eagle lives in Reykjavik. of space at the speed of light. Computational ,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,512,512,0.25,0.2344,1,10579,False,red panda lives in Florence, red panda lives in Florence.  The special fact is: the red panda lives in,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,512,512,0.25,0.2324,2,20579,False,red panda lives in Reykjavik, red panda lives in Reykjavik. dog in the tranquil afternoon. A journey of,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,512,512,0.5,0.4688,0,604,False,blue whale lives in Kyoto," blue whale lives in Kyoto.ival library, forgotten histories sleep. Time and tid",True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,512,512,0.5,0.4648,1,10604,False,peregrine falcon lives in Zurich, peregrine falcon lives in Zurich.  The special fact is: the pe,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,512,512,0.5,0.4648,2,20604,False,red panda lives in Valparaiso, red panda lives in Valparaiso. The special fact is: the red panda lives,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,512,512,0.75,0.6973,0,629,False,peregrine falcon lives in Kyoto, peregrine falcon lives in Kyoto. symmetry under analysis. The quick brown fox j,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,512,512,0.75,0.7012,1,10629,False,red panda lives in Kyoto," red panda lives in Kyoto. All that glitters is not gold, yet it frequently catc",True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,512,512,0.75,0.7012,2,20629,False,snow leopard lives in Florence," snow leopard lives in Florence. Rigorous practice fosters mastery, though ultim",True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,512,512,1.0,0.9355,0,654,False,red panda lives in Florence, red panda lives in Florence.  The special fact is: the red panda lives in,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,512,512,1.0,0.9336,1,10654,False,snow leopard lives in Zurich, snow leopard lives in Zurich.  The snow leopard lives in Zurich. ,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,512,512,1.0,0.9316,2,20654,False,blue whale lives in Valparaiso, blue whale lives in Valparaiso.  The special fact is: the blue whale lives,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,0.0,0.0,0,1066,False,red panda lives in Valparaiso, red panda lives in Valparaiso. increases above sea level. Electromagnetic radia,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,0.0,0.0,1,11066,False,snow leopard lives in Florence, snow leopard lives in Florence. efficiency depends profoundly on memory hierarc,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,0.0,0.0,2,21066,False,golden eagle lives in Florence, golden eagle lives in Florence. Under analysis. The quick brown fox jumps over ,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,0.25,0.2412,0,1091,False,snow leopard lives in Reykjavik," snow leopard lives in Reykjavik. or not to be, that remains the enduring philos",True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,0.25,0.2412,1,11091,False,peregrine falcon lives in Florence, peregrine falcon lives in Florence. at the speed of light. Computational effici,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,0.25,0.2412,2,21091,False,red panda lives in Valparaiso," red panda lives in Valparaiso.ers mastery, though ultimate perfection remains a",True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,0.5,0.4844,0,1116,False,golden eagle lives in Montreal," golden eagle lives in Montreal. to be, that remains the enduring philosophical ",True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,0.5,0.4844,1,11116,False,red panda lives in Florence, red panda lives in Florence.heric pressure decreases systematically as altitude,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,0.5,0.4844,2,21116,False,snow leopard lives in Montreal, snow leopard lives in Montreal. it frequently catches the human eye. Knowledge ,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,0.75,0.7246,0,1141,False,blue whale lives in Valparaiso," blue whale lives in Valparaiso., though ultimate perfection remains aspirationa",True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,0.75,0.7236,1,11141,False,peregrine falcon lives in Kyoto," peregrine falcon lives in Kyoto. or not to be, that remains the enduring philos",True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,0.75,0.7246,2,21141,False,snow leopard lives in Zurich, snow leopard lives in Zurich. under analysis. The quick brown fox jumps over th,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,1.0,0.9678,0,1166,False,snow leopard lives in Florence, snow leopard lives in Florence.  The special fact is: the snow leopard lives in,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,1.0,0.9658,1,11166,False,blue whale lives in Reykjavik, blue whale lives in Reykjavik.  The special fact is: the blue whale lives,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,1024,1024,1.0,0.9678,2,21166,False,snow leopard lives in Kyoto, snow leopard lives in Kyoto.  The special fact is: the snow leopard lives in,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,0.0,0.0,0,2090,False,red panda lives in Zurich, red panda lives in Zurich. Computational efficiency depends profoundly on memor,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,0.0,0.0,1,12090,False,red panda lives in Montreal, red panda lives in Montreal. guides the ethical application of knowledge. The e,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,0.0,0.0,2,22090,False,peregrine falcon lives in Florence, peregrine falcon lives in Florence. The ancient city. Atmospheric pressure decr,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,0.25,0.2456,0,2115,False,red panda lives in Reykjavik, red panda lives in Reykjavik. locality. The crystalline structure of minerals e,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,0.25,0.2461,1,12115,False,snow leopard lives in Zurich, snow leopard lives in Zurich. journey of a thousand miles begins with a single ,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,0.25,0.2461,2,22115,False,golden eagle lives in Zurich, golden eagle lives in Zurich.  The special fact is: the golden eagle lives in Z,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,0.5,0.4922,0,2140,False,red panda lives in Montreal, red panda lives in Montreal. Atmospheric pressure decreases systematically as a,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,0.5,0.4902,1,12140,False,peregrine falcon lives in Reykjavik," peregrine falcon lives in Reykjavik. gold, yet it frequently catches the",True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,0.5,0.4922,2,22140,False,blue whale lives in Montreal, blue whale lives in Montreal. and wisdom guides the ethical application of know,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,0.75,0.7368,0,2165,False,red panda lives in Valparaiso," red panda lives in Valparaiso., though ultimate perfection remains aspirational",True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,0.75,0.7368,1,12165,False,snow leopard lives in Reykjavik, snow leopard lives in Reykjavik. The special fact is: the human eye. The,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,0.75,0.7358,2,22165,False,peregrine falcon lives in Valparaiso, peregrine falcon lives in Valparaiso. Decreases systematically as altitude incr,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,1.0,0.9824,0,2190,False,peregrine falcon lives in Montreal, peregrine falcon lives in Montreal.  The special fact is: the pere,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,1.0,0.9834,1,12190,False,red panda lives in Zurich, red panda lives in Zurich.  The special fact is: the red panda lives,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,2048,2048,1.0,0.9839,2,22190,False,red panda lives in Florence, red panda lives in Florence.  The special fact is: the red panda lives in,True,1.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,0.0,0.0,0,4138,False,blue whale lives in Montreal,          leis    is.  ,False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,0.0,0.0,1,14138,False,golden eagle lives in Kyoto,           .otch. le. le,False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,0.0,0.0,2,24138,False,golden eagle lives in Reykjavik,                    ,False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,0.25,0.248,0,4163,False,blue whale lives in Montreal,                 ast. ,False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,0.25,0.2478,1,14163,False,red panda lives in Valparaiso,                .   ,False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,0.25,0.2478,2,24163,False,golden eagle lives in Reykjavik,      .     .cat.     ,False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,0.5,0.4961,0,4188,False,golden eagle lives in Florence,            d.le.le le.,False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,0.5,0.4956,1,14188,False,red panda lives in Reykjavik,                    ,False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,0.5,0.4956,2,24188,False,blue whale lives in Reykjavik,                    ,False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,0.75,0.7441,0,4213,False,golden eagle lives in Montreal,"     .   c.""cast   .catastes",False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,0.75,0.7434,1,14213,False,peregrine falcon lives in Kyoto,                    ,False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,0.75,0.7437,2,24213,False,blue whale lives in Valparaiso,               .    ,False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,1.0,0.9912,0,4238,False,red panda lives in Reykjavik,                    ,False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,1.0,0.9912,1,14238,False,snow leopard lives in Reykjavik,                    ,False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,4096,4096,1.0,0.9915,2,24238,False,blue whale lives in Reykjavik,                    ,False,0.0,SUCCESS
+Pythia-410M,needle_in_haystack,8192,8192,0.0,0.0,0,8234,False,snow leopard lives in Kyoto,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,8192,8192,0.0,0.0,1,18234,False,peregrine falcon lives in Montreal,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,8192,8192,0.0,0.0,2,28234,False,golden eagle lives in Valparaiso,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,8192,8192,0.25,0.249,0,8259,False,snow leopard lives in Zurich,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,8192,8192,0.25,0.2489,1,18259,False,red panda lives in Valparaiso,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,8192,8192,0.25,0.2488,2,28259,False,peregrine falcon lives in Reykjavik,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,8192,8192,0.5,0.4978,0,8284,False,peregrine falcon lives in Zurich,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,8192,8192,0.5,0.498,1,18284,False,blue whale lives in Zurich,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,8192,8192,0.5,0.4978,2,28284,False,peregrine falcon lives in Montreal,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,8192,8192,0.75,0.7465,0,8309,False,peregrine falcon lives in Valparaiso,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,8192,8192,0.75,0.7467,1,18309,False,snow leopard lives in Valparaiso,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,8192,8192,0.75,0.7468,2,28309,False,golden eagle lives in Valparaiso,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,8192,8192,1.0,0.9956,0,8334,False,peregrine falcon lives in Florence,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,8192,8192,1.0,0.9961,1,18334,False,golden eagle lives in Kyoto,OOM,False,0.0,OOM
+Pythia-410M,needle_in_haystack,8192,8192,1.0,0.996,2,28334,False,red panda lives in Florence,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,512,512,0.0,0.0,0,554,False,450,  1. The power of knowledge.  2. The wisdom of the wise. ,False,0.0,SUCCESS
+Pythia-410M,associative_recall,512,512,0.0,0.0,1,10554,False,378,  1. The value of the key is the value of the key.  2.,False,0.0,SUCCESS
+Pythia-410M,associative_recall,512,512,0.0,0.0,2,20554,False,228,  The value of the key is the value of the map.  The value of the,False,0.0,SUCCESS
+Pythia-410M,associative_recall,512,512,0.25,0.2363,0,579,False,510, the amount of information that is stored in the memory of the key. The value is,False,0.0,SUCCESS
+Pythia-410M,associative_recall,512,512,0.25,0.2363,1,10579,False,986, delta = (delta - delta) / delta. The delta is the difference between the two va,False,0.0,SUCCESS
+Pythia-410M,associative_recall,512,512,0.25,0.2363,2,20579,False,652,  lambda = (lambda x) / (lambda x)  lambda = (lambda x,False,0.0,SUCCESS
+Pythia-410M,associative_recall,512,512,0.5,0.4727,0,604,False,307,  The value of the key is the value of the sigma map.  The value of,False,0.0,SUCCESS
+Pythia-410M,associative_recall,512,512,0.5,0.4727,1,10604,False,474, the value of the key. The value of the key is: the value of the key. The,False,0.0,SUCCESS
+Pythia-410M,associative_recall,512,512,0.5,0.4727,2,20604,False,936,  The value of the key is the value of the map.  The value of the,False,0.0,SUCCESS
+Pythia-410M,associative_recall,512,512,0.75,0.709,0,629,False,420, 420. The value is: 420. The value is: 420. The value is: 420.,True,1.0,SUCCESS
+Pythia-410M,associative_recall,512,512,0.75,0.707,1,10629,False,984, the amount of information that is stored in the key. The value is: the amount o,False,0.0,SUCCESS
+Pythia-410M,associative_recall,512,512,0.75,0.709,2,20629,False,122, delta map to value. The value is: delta map to value. The value is: delta map,False,0.0,SUCCESS
+Pythia-410M,associative_recall,512,512,1.0,0.9453,0,654,False,679,  The value of the key is the value of the delta map.  The delta map,False,0.0,SUCCESS
+Pythia-410M,associative_recall,512,512,1.0,0.9453,1,10654,False,791,  The value of the key is the number of times the key has been used.  ,False,0.0,SUCCESS
+Pythia-410M,associative_recall,512,512,1.0,0.9453,2,20654,False,259,  1. The value of the key is the value of the key.  2.,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,0.0,0.0,0,1066,False,639, the amount of energy required to move the object from one place to another. The,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,0.0,0.0,1,11066,False,214, delta maps to value. The value is: delta maps to efficiency. The value is: delt,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,0.0,0.0,2,21066,False,586,  delta = (delta - delta_min) / delta_max  delta_min,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,0.25,0.2432,0,1091,False,907,  lambda = (lambda x) / (lambda x)  lambda = (lambda x,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,0.25,0.2432,1,11091,False,403, delta = delta - delta. The delta is the difference between the value of the key,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,0.25,0.2432,2,21091,False,547,  The value of the key is the value of the map.  The value of the,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,0.5,0.4863,0,1116,False,687,  (1) The value of the key is the value of the key.  (,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,0.5,0.4863,1,11116,False,646, delta = (delta - delta0) / delta0. The delta is the difference between the curr,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,0.5,0.4863,2,21116,False,221,  The value of the key is the value of the value of the key.  The,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,0.75,0.7295,0,1141,False,244,  The value of the key is the value of the key.  The value of the,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,0.75,0.7295,1,11141,False,878,  The value of the key is the value of the map.  The value of the,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,0.75,0.7295,2,21141,False,198,  The value of the key is:  The value of the omega map is: ,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,1.0,0.9727,0,1166,False,157, delta = delta - delta. The delta is the difference between the value of the key,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,1.0,0.9727,1,11166,False,380,  The value of the key is the value of the map.  The value of the,False,0.0,SUCCESS
+Pythia-410M,associative_recall,1024,1024,1.0,0.9727,2,21166,False,204,  The value of the key is the value of the map.  The value of the,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,0.0,0.0,0,2090,False,735,  • The value of the key is the value of the key.  • The value,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,0.0,0.0,1,12090,False,728,  The value of the key is the value of the map.  The value of the,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,0.0,0.0,2,22090,False,860,  delta = (delta - delta_min) / delta_max  delta_min,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,0.25,0.2466,0,2115,False,687,  lambda = (1 + lambda) * (1 + lambda) * (1 + lambda,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,0.25,0.2466,1,12115,False,134,  The value of the key is the value of the value of the key.  The,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,0.25,0.2466,2,22115,False,963,  The value of the key is the value of the value of the value of the value of,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,0.5,0.4932,0,2140,False,662,  The value of the key is the value of the value of the value of the value of,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,0.5,0.4932,1,12140,False,419,  lambda = (1 + (1 - (1 - (1 - (1 - (,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,0.5,0.4932,2,22140,False,349,  The value is:  The value is:  The value is:  ,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,0.75,0.7397,0,2165,False,696,  The value of the key is the value of the key.  The value of the,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,0.75,0.7397,1,12165,False,367, the value of the information contained in the key. The value of the information,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,0.75,0.7397,2,22165,False,431,  The value of the key is the value of the key.  The value of the,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,1.0,0.9863,0,2190,False,472,  (1) the number of times the key is used in the current state of the program,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,1.0,0.9858,1,12190,False,739,  The value of the key is the number of times the key is used.  The,False,0.0,SUCCESS
+Pythia-410M,associative_recall,2048,2048,1.0,0.9858,2,22190,False,845,  The value of the key is the value of the map.  The value of the,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,0.0,0.0,0,4138,False,281,          an     .per.s,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,0.0,0.0,1,14138,False,567,            ast.an le.an ,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,0.0,0.0,2,24138,False,492,                 .so.,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,0.25,0.2483,0,4163,False,835,c.ch.es.le.le           ,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,0.25,0.2483,1,14163,False,715,                .   ,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,0.25,0.2483,2,24163,False,973,               astubb. ,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,0.5,0.4966,0,4188,False,589,            d.le.le le.,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,0.5,0.4966,1,14188,False,778,le.an             .ber-le,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,0.5,0.4966,2,24188,False,229,                    ,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,0.75,0.7446,0,4213,False,579,an    .    cast.catast.Wcatastes,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,0.75,0.7449,1,14213,False,439,                    ,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,0.75,0.7449,2,24213,False,317,               .    ,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,1.0,0.9929,0,4238,False,795,                 le- ,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,1.0,0.9932,1,14238,False,145,                    ,False,0.0,SUCCESS
+Pythia-410M,associative_recall,4096,4096,1.0,0.9929,2,24238,False,943,"         . . . c.""cast ",False,0.0,SUCCESS
+Pythia-410M,associative_recall,8192,8192,0.0,0.0,0,8234,False,216,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,8192,8192,0.0,0.0,1,18234,False,453,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,8192,8192,0.0,0.0,2,28234,False,964,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,8192,8192,0.25,0.2491,0,8259,False,984,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,8192,8192,0.25,0.2491,1,18259,False,724,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,8192,8192,0.25,0.2491,2,28259,False,376,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,8192,8192,0.5,0.4983,0,8284,False,406,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,8192,8192,0.5,0.4983,1,18284,False,344,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,8192,8192,0.5,0.4983,2,28284,False,969,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,8192,8192,0.75,0.7474,0,8309,False,420,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,8192,8192,0.75,0.7474,1,18309,False,111,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,8192,8192,0.75,0.7473,2,28309,False,936,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,8192,8192,1.0,0.9965,0,8334,False,821,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,8192,8192,1.0,0.9966,1,18334,False,993,OOM,False,0.0,OOM
+Pythia-410M,associative_recall,8192,8192,1.0,0.9966,2,28334,False,688,OOM,False,0.0,OOM
+Mamba-370M,passkey,512,512,0.0,0.0,0,554,False,77550,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,512,512,0.0,0.0,1,10554,False,78975,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,512,512,0.0,0.0,2,20554,False,26424,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,512,512,0.25,0.2363,0,579,False,51425,  The secret passkey is 51425. Remember this number.  The secret passkey,True,1.0,SUCCESS
+Mamba-370M,passkey,512,512,0.25,0.2363,1,10579,False,94205, a) a secret number b) a secret word c) a secret number d) a secret word,False,0.0,SUCCESS
+Mamba-370M,passkey,512,512,0.25,0.2363,2,20579,False,52637,  The secret passkey is 52637. Remember this number.  The secret passkey,True,1.0,SUCCESS
+Mamba-370M,passkey,512,512,0.5,0.4727,0,604,False,18403, 18403. Remember this number. Under analysis. The silver cloud carries subtle li,True,1.0,SUCCESS
+Mamba-370M,passkey,512,512,0.5,0.4727,1,10604,False,26561, a) a secret number b) a secret number c) a secret number d) a secret number,False,0.0,SUCCESS
+Mamba-370M,passkey,512,512,0.5,0.4727,2,20604,False,68450, The secret passkey is a secret key. The secret passkey is a secret key. The sec,False,0.0,SUCCESS
+Mamba-370M,passkey,512,512,0.75,0.709,0,629,False,17075, The secret passkey is: The secret passkey is: The secret passkey is: The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,512,512,0.75,0.709,1,10629,False,14815,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,512,512,0.75,0.709,2,20629,False,94376, a) a secret number b) a secret number c) a secret number d) a secret number,False,0.0,SUCCESS
+Mamba-370M,passkey,512,512,1.0,0.9434,0,654,False,96487, 96487. Remember this number.  The secret passkey is 96487. Remember,True,1.0,SUCCESS
+Mamba-370M,passkey,512,512,1.0,0.9453,1,10654,False,27349,  The secret passkey is 27349. Remember this number.  The secret passkey,True,1.0,SUCCESS
+Mamba-370M,passkey,512,512,1.0,0.9453,2,20654,False,68079,  The secret passkey is 68079. Remember this number.  The secret passkey,True,1.0,SUCCESS
+Mamba-370M,passkey,1024,1024,0.0,0.0,0,1066,False,68687,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,1024,1024,0.0,0.0,1,11066,False,24712,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,1024,1024,0.0,0.0,2,21066,False,72239,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,1024,1024,0.25,0.2432,0,1091,False,57125,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,1024,1024,0.25,0.2432,1,11091,False,48863, The secret passkey is: The secret passkey is: The secret passkey is: The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,1024,1024,0.25,0.2432,2,21091,False,67292,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,1024,1024,0.5,0.4863,0,1116,False,85225, 85225. Remember this number. From the proper angle. Rigorous practice fosters m,True,1.0,SUCCESS
+Mamba-370M,passkey,1024,1024,0.5,0.4863,1,11116,False,96903," 96903. Remember this number. and tide wait for no man, nor do they pause for",True,1.0,SUCCESS
+Mamba-370M,passkey,1024,1024,0.5,0.4863,2,21116,False,77517,  77517  Remember this number.  Remember this number.  Remember,True,1.0,SUCCESS
+Mamba-370M,passkey,1024,1024,0.75,0.7285,0,1141,False,62821,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,1024,1024,0.75,0.7295,1,11141,False,25614, 25614. Remember this number. The ancient city. Atmospheric pressure decreases s,True,1.0,SUCCESS
+Mamba-370M,passkey,1024,1024,0.75,0.7295,2,21141,False,32203, 32203. Remember this number. The ethical application of knowledge. The early bi,True,1.0,SUCCESS
+Mamba-370M,passkey,1024,1024,1.0,0.9727,0,1166,False,95696,  The secret passkey is 95696. Remember this number.  The secret passkey,True,1.0,SUCCESS
+Mamba-370M,passkey,1024,1024,1.0,0.9727,1,11166,False,45894,  The secret passkey is 45894. Remember this number.  The secret passkey,True,1.0,SUCCESS
+Mamba-370M,passkey,1024,1024,1.0,0.9727,2,21166,False,14839,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,2048,2048,0.0,0.0,0,2090,False,42707,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,2048,2048,0.0,0.0,1,12090,False,89848,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,2048,2048,0.0,0.0,2,22090,False,55365,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,2048,2048,0.25,0.2466,0,2115,False,56370,  The secret passkey is 56370. Remember this number.  Remember this number.,True,1.0,SUCCESS
+Mamba-370M,passkey,2048,2048,0.25,0.2466,1,12115,False,27261,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,2048,2048,0.25,0.2466,2,22115,False,36744,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,2048,2048,0.5,0.4932,0,2140,False,85049,"  The secret passkey is 85049. Remember this number. be, that remains the enduri",True,1.0,SUCCESS
+Mamba-370M,passkey,2048,2048,0.5,0.4932,1,12140,False,45995,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,2048,2048,0.5,0.4932,2,22140,False,87817,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,2048,2048,0.75,0.7397,0,2165,False,75334,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,2048,2048,0.75,0.7397,1,12165,False,44239,  44239. Remember this number. The quick brown fox jumps over the lazy dog in th,True,1.0,SUCCESS
+Mamba-370M,passkey,2048,2048,0.75,0.7393,2,22165,False,71917,  The secret passkey is 71917. Remember this number. glitters is not,True,1.0,SUCCESS
+Mamba-370M,passkey,2048,2048,1.0,0.9858,0,2190,False,86230,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,2048,2048,1.0,0.9863,1,12190,False,42392,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,2048,2048,1.0,0.9863,2,22190,False,82092,  The secret passkey is 82092. Remember this number.  The secret passkey,True,1.0,SUCCESS
+Mamba-370M,passkey,4096,4096,0.0,0.0,0,4138,True,80131,  The secret passkey is 80131.  The secret passkey is 80131.,True,1.0,SUCCESS
+Mamba-370M,passkey,4096,4096,0.0,0.0,1,14138,True,19779,  The secret passkey is 19779. Remember this number. Run the numbers through the,True,1.0,SUCCESS
+Mamba-370M,passkey,4096,4096,0.0,0.0,2,24138,True,56736,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,4096,4096,0.25,0.2483,0,4163,True,77852,  The secret passkey is 77852. Remember this number. In the quiet corridors of t,True,1.0,SUCCESS
+Mamba-370M,passkey,4096,4096,0.25,0.2483,1,14163,True,72677,  The secret passkey is 72677. Remember this number.  The secret pass,True,1.0,SUCCESS
+Mamba-370M,passkey,4096,4096,0.25,0.2483,2,24163,True,45374, The secret passkey is 45374. Remember this number. The quick brown fox jumps ov,True,1.0,SUCCESS
+Mamba-370M,passkey,4096,4096,0.5,0.4966,0,4188,True,92296,  The secret passkey is 92296. Remember this number.  The secret passkey,True,1.0,SUCCESS
+Mamba-370M,passkey,4096,4096,0.5,0.4966,1,14188,True,57421,  The secret passkey is 57421. Remember this number. thousand miles begins with ,True,1.0,SUCCESS
+Mamba-370M,passkey,4096,4096,0.5,0.4966,2,24188,True,49120,  The secret passkey is 49120. Remember this number. speed of light. Computation,True,1.0,SUCCESS
+Mamba-370M,passkey,4096,4096,0.75,0.7446,0,4213,True,89729,  The secret passkey is  The secret passkey is  The secret passkey,False,0.0,SUCCESS
+Mamba-370M,passkey,4096,4096,0.75,0.7449,1,14213,True,18084,  The secret passkey is:  The secret passkey is:  The secret,False,0.0,SUCCESS
+Mamba-370M,passkey,4096,4096,0.75,0.7446,2,24213,True,66463,  The secret passkey is the secret passkey. The secret passkey is the secret pas,False,0.0,SUCCESS
+Mamba-370M,passkey,4096,4096,1.0,0.9932,0,4238,True,44553,  The secret passkey is the secret passkey. The secret passkey is the secret pas,False,0.0,SUCCESS
+Mamba-370M,passkey,4096,4096,1.0,0.9932,1,14238,True,54066,  The secret passkey is the secret passkey. The secret passkey is the secret pas,False,0.0,SUCCESS
+Mamba-370M,passkey,4096,4096,1.0,0.9932,2,24238,True,44635,  The secret passkey is the secret passkey. The secret passkey is the secret pas,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,0.0,0.0,0,8234,True,19806, the secret password. The secret password is the key to the secret passageway. T,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,0.0,0.0,1,18234,True,87691, the secret key to the secret passageway. The secret passageway is the secret ke,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,0.0,0.0,2,28234,True,61995, the secret password. The secret password is the key to the secret passageway. T,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,0.25,0.2491,0,8259,True,33697, the key to the secret passkey is the key to the secret passkey. The secret pass,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,0.25,0.2491,1,18259,True,63267, the key to the secret of the secret of the secret of the secret of the secret o,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,0.25,0.2491,2,28259,True,55195, the key to the secret passkey is the key to the secret passkey. The secret pass,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,0.5,0.4983,0,8284,True,29444, the secret key to the secret passageway. The secret passkey is the secret key t,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,0.5,0.4983,1,18284,True,41266, the secret key is the secret key. The secret passkey is the secret key. The sec,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,0.5,0.4983,2,28284,True,76547, the secret key is the secret key. The secret key is the secret key. The secret ,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,0.75,0.7474,0,8309,True,61461, the secret key is the secret key. The secret key is the secret key over the laz,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,0.75,0.7474,1,18309,True,70256, the secret of the secret of the secret of the secret of the secret of the secre,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,0.75,0.7473,2,28309,True,71805, the secret passkey is the secret key  The secret passkey is the secret passkey ,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,1.0,0.9966,0,8334,True,50082, the secret key to the secret of the secret of the secret of the secret of the s,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,1.0,0.9966,1,18334,True,15534, the secret of the secret of the secret of the secret of the secret of the secre,False,0.0,SUCCESS
+Mamba-370M,passkey,8192,8192,1.0,0.9965,2,28334,True,85325, the secret key to the secret of the secret of the secret of the secret of the s,False,0.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,0.0,0.0,0,554,False,peregrine falcon lives in Montreal, peregrine falcon lives in Montreal. The special fact is: the peregrine,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,0.0,0.0,1,10554,False,peregrine falcon lives in Montreal," peregrine falcon lives in Montreal. man, nor do they pause for human contemplat",True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,0.0,0.0,2,20554,False,golden eagle lives in Zurich," golden eagle lives in Zurich. archival library, forgotten histories sleep. Time",True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,0.25,0.2324,0,579,False,golden eagle lives in Reykjavik," golden eagle lives in Reykjavik. Of course, the special fact is not the golden ",True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,0.25,0.2344,1,10579,False,red panda lives in Florence, red panda lives in Florence. fox jumps over the lazy dog in the tranquil aftern,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,0.25,0.2324,2,20579,False,red panda lives in Reykjavik, red panda lives in Reykjavik. dog in the tranquil afternoon. A journey of,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,0.5,0.4688,0,604,False,blue whale lives in Kyoto," blue whale lives in Kyoto.ival library, forgotten histories sleep. Time and tid",True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,0.5,0.4648,1,10604,False,peregrine falcon lives in Zurich, peregrine falcon lives in Zurich.  The special fact is: the pe,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,0.5,0.4648,2,20604,False,red panda lives in Valparaiso, red panda lives in Valparaiso. The special fact is: the red panda lives,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,0.75,0.6973,0,629,False,peregrine falcon lives in Kyoto, peregrine falcon lives in Kyoto.  The special fact is: the pere,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,0.75,0.7012,1,10629,False,red panda lives in Kyoto, red panda lives in Kyoto. The special fact is: the red panda lives in Kyoto.,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,0.75,0.7012,2,20629,False,snow leopard lives in Florence," snow leopard lives in Florence. Rigorous practice fosters mastery, though ultim",True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,1.0,0.9355,0,654,False,red panda lives in Florence, red panda lives in Florence. The special fact is: the red panda lives in Floren,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,1.0,0.9336,1,10654,False,snow leopard lives in Zurich, snow leopard lives in Zurich. The special fact is: the snow leopard lives in Zu,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,512,512,1.0,0.9316,2,20654,False,blue whale lives in Valparaiso, blue whale lives in Valparaiso.  The special fact is: the blue whale lives,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,0.0,0.0,0,1066,False,red panda lives in Valparaiso, red panda lives in Valparaiso. Does the special fact depend on memory hierarchy,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,0.0,0.0,1,11066,False,snow leopard lives in Florence, snow leopard lives in Florence. efficiency depends profoundly on memory hierarc,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,0.0,0.0,2,21066,False,golden eagle lives in Florence," golden eagle lives in Florence, under analysis. The special fact is: the golden",True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,0.25,0.2412,0,1091,False,snow leopard lives in Reykjavik," snow leopard lives in Reykjavik. Or not to be or not to be, that",True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,0.25,0.2412,1,11091,False,peregrine falcon lives in Florence, peregrine falcon lives in Florence. Atmospheric pressure decreases systematical,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,0.25,0.2412,2,21091,False,red panda lives in Valparaiso, red panda lives in Valparaiso. The special fact is: the red panda lives,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,0.5,0.4844,0,1116,False,golden eagle lives in Montreal," golden eagle lives in Montreal, and the early bird catches the worm. To be or n",True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,0.5,0.4844,1,11116,False,red panda lives in Florence, red panda lives in Florence.  The special fact is: the red panda lives in,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,0.5,0.4844,2,21116,False,snow leopard lives in Montreal, snow leopard lives in Montreal. It is a fact that the snow leopard lives in Mon,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,0.75,0.7246,0,1141,False,blue whale lives in Valparaiso, blue whale lives in Valparaiso.  The special fact is: the blue whale lives,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,0.75,0.7236,1,11141,False,peregrine falcon lives in Kyoto," peregrine falcon lives in Kyoto. or not to be, that remains the enduring philos",True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,0.75,0.7246,2,21141,False,snow leopard lives in Zurich, snow leopard lives in Zurich. Under analysis. The quick brown fox jumps over th,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,1.0,0.9678,0,1166,False,snow leopard lives in Florence, snow leopard lives in Florence.  The special fact is: the snow leopard lives in,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,1.0,0.9658,1,11166,False,blue whale lives in Reykjavik, blue whale lives in Reykjavik.  The special fact is: the blue whale lives,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,1024,1024,1.0,0.9678,2,21166,False,snow leopard lives in Kyoto, snow leopard lives in Kyoto. The special fact is: the snow leopard lives in Kyo,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,0.0,0.0,0,2090,False,red panda lives in Zurich, red panda lives in the tranquil afternoon. A journey of a thousand miles begins,False,0.8,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,0.0,0.0,1,12090,False,red panda lives in Montreal, red panda lives in the city. The special fact is: the red panda lives in the,False,0.8,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,0.0,0.0,2,22090,False,peregrine falcon lives in Florence, peregrine falcon lives in Florence. The special fact is: the peregrine,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,0.25,0.2456,0,2115,False,red panda lives in Reykjavik, red panda lives in Reykjavik. The special fact is: the red panda is,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,0.25,0.2461,1,12115,False,snow leopard lives in Zurich, snow leopard lives in Zurich.  The special fact is: the snow leopard lives,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,0.25,0.2461,2,22115,False,golden eagle lives in Zurich, golden eagle lives in Zurich. The special fact is: the golden eagle is in Zuric,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,0.5,0.4922,0,2140,False,red panda lives in Montreal," red panda lives in Montreal, nor does it catch the human eye. Knowledge represe",True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,0.5,0.4902,1,12140,False,peregrine falcon lives in Reykjavik, peregrine falcon lives in Reykjavik.  The special fact is:,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,0.5,0.4922,2,22140,False,blue whale lives in Montreal," blue fox lives in Montreal, and the wisdom guides the ethical application of kn",False,0.8,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,0.75,0.7368,0,2165,False,red panda lives in Valparaiso, red panda lives in Valparaiso.  The special fact is: the red p,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,0.75,0.7368,1,12165,False,snow leopard lives in Reykjavik," snow leopard lives in Reykjavik. The human eye. Knowledge represents power, and",True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,0.75,0.7358,2,22165,False,peregrine falcon lives in Valparaiso, peregrine falcon lives in Valparaiso.  The special fact is:,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,1.0,0.9824,0,2190,False,peregrine falcon lives in Montreal, peregrine falcon lives in Montreal.  The special fact is: the pere,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,1.0,0.9834,1,12190,False,red panda lives in Zurich, red panda lives in Zurich.  The special fact is: the red panda lives,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,2048,2048,1.0,0.9839,2,22190,False,red panda lives in Florence, red panda lives in Florence.  The special fact is: the red panda lives in,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,0.0,0.0,0,4138,True,blue whale lives in Montreal, blue fox is not the quick brown fox. The special fact is: the blue fox is not t,False,0.2,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,0.0,0.0,1,14138,True,golden eagle lives in Kyoto, sun is the center of the universe. The special fact is: the sun is the center o,False,0.0,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,0.0,0.0,2,24138,True,golden eagle lives in Reykjavik, golden eagle flies through the air at the speed of light. The special fact is: ,False,0.4,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,0.25,0.248,0,4163,True,blue whale lives in Montreal, blue whale lives in Montreal. Through the vacuum of space at the speed of light,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,0.25,0.2478,1,14163,True,red panda lives in Valparaiso, red panda lives in Valparaiso. Question. All that glitters is not gold,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,0.25,0.2478,2,24163,True,golden eagle lives in Reykjavik, golden eagle lives in Reykjavik. Ethical application of knowledge. The early bi,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,0.5,0.4961,0,4188,True,golden eagle lives in Florence, golden eagle lives in Florence. The special fact is: the golden eagle lives in ,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,0.5,0.4956,1,14188,True,red panda lives in Reykjavik, red panda lives in Reykjavik. And the second mouse secures the cheese. In,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,0.5,0.4956,2,24188,True,blue whale lives in Reykjavik, blue whale lives in Reykjavik. If someone were to ask you to describe the blue ,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,0.75,0.7441,0,4213,True,golden eagle lives in Montreal," golden eagle lives in Montreal, nor does it catch the human eye. Knowledge repr",True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,0.75,0.7434,1,14213,True,peregrine falcon lives in Kyoto, peregrine falcon lives in Kyoto.  The special fact is: the pere,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,0.75,0.7437,2,24213,True,blue whale lives in Valparaiso, blue whale lives in Valparaiso.  The special fact is: the blue whale lives,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,1.0,0.9912,0,4238,True,red panda lives in Reykjavik, red panda lives in Reykjavik. The special fact is not the fact that the red,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,1.0,0.9912,1,14238,True,snow leopard lives in Reykjavik, snow leopard lives in Reykjavik.  The special fact is: the snow le,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,4096,4096,1.0,0.9915,2,24238,True,blue whale lives in Reykjavik, blue whale lives in Reykjavik.  The special fact is: the blue whale lives,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,0.0,0.0,0,8234,True,snow leopard lives in Kyoto," human mind is a complex, multi-layered, multi-functional, multi-functional, mul",False,0.2,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,0.0,0.0,1,18234,True,peregrine falcon lives in Montreal, human mind is a machine. The special fact is: the human mind is a machine. The ,False,0.2,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,0.0,0.0,2,28234,True,golden eagle lives in Valparaiso, human eye is a very good sensor. The human eye is a very good sensor. The human,False,0.0,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,0.25,0.249,0,8259,True,snow leopard lives in Zurich, snow leopard lives in the city. The special fact is: the snow leopard lives in ,False,0.8,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,0.25,0.2489,1,18259,True,red panda lives in Valparaiso, red panda lives in the city. The special fact is: the red panda lives in the,False,0.8,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,0.25,0.2488,2,28259,True,peregrine falcon lives in Reykjavik, peregrine falcon lives in Reykjavik. Communicate with the author. ,True,1.0,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,0.5,0.4978,0,8284,True,peregrine falcon lives in Zurich, human eye is a visual organ. The special fact is: the human eye is a visual org,False,0.0,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,0.5,0.498,1,18284,True,blue whale lives in Zurich, human eye is a visual organ. The human eye is a visual organ. The human eye is ,False,0.0,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,0.5,0.4978,2,28284,True,peregrine falcon lives in Montreal," human mind is a complex, multi-layered, multi-functional, multi-sensory,",False,0.2,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,0.75,0.7465,0,8309,True,peregrine falcon lives in Valparaiso, human mind is a special kind of animal mind. The special fact is that the human,False,0.2,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,0.75,0.7467,1,18309,True,snow leopard lives in Valparaiso, sun is shining. The sun is shining. The sun is shining. The sun is shining. The,False,0.2,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,0.75,0.7468,2,28309,True,golden eagle lives in Valparaiso, sun is shining. The sun is shining. The sun is shining. The sun is shining. The,False,0.2,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,1.0,0.9956,0,8334,True,peregrine falcon lives in Florence," human eye is a sensitive, highly sensitive, highly sensitive, highly sensitive,",False,0.0,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,1.0,0.9961,1,18334,True,golden eagle lives in Kyoto, silver cloud carries subtle light if observed from the proper angle. The specia,False,0.0,SUCCESS
+Mamba-370M,needle_in_haystack,8192,8192,1.0,0.996,2,28334,True,red panda lives in Florence, red panda lives in the country of the dawn. The special fact is that the red pa,False,0.8,SUCCESS
+Mamba-370M,associative_recall,512,512,0.0,0.0,0,554,False,450, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,512,512,0.0,0.0,1,10554,False,378, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,512,512,0.0,0.0,2,20554,False,228, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,512,512,0.25,0.2363,0,579,False,510, the value of the key is the value of the key. The key is the key. The key,False,0.0,SUCCESS
+Mamba-370M,associative_recall,512,512,0.25,0.2363,1,10579,False,986, the value of the key. The value of the key is the value of the key. The value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,512,512,0.25,0.2363,2,20579,False,652, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,512,512,0.5,0.4727,0,604,False,307," key=sigma maps to value=307., forgotten histories sleep. Time and tide wait for",True,1.0,SUCCESS
+Mamba-370M,associative_recall,512,512,0.5,0.4727,1,10604,False,474, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,512,512,0.5,0.4727,2,20604,False,936," key=phi maps to value=936. Rigorous practice fosters mastery, though ultimate p",True,1.0,SUCCESS
+Mamba-370M,associative_recall,512,512,0.75,0.709,0,629,False,420, the value of the key. The value of the key is the value of the key. The value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,512,512,0.75,0.707,1,10629,False,984, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,512,512,0.75,0.709,2,20629,False,122, the value of the key. The value of the key is the value of the key. The value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,512,512,1.0,0.9453,0,654,False,679, delta = 0.  The value is: delta = 0.  The value is:,False,0.0,SUCCESS
+Mamba-370M,associative_recall,512,512,1.0,0.9453,1,10654,False,791, key=omega maps to value=791.  What value does key 'omega' map to,True,1.0,SUCCESS
+Mamba-370M,associative_recall,512,512,1.0,0.9453,2,20654,False,259, key=kappa maps to value=259.  What is the value of key 'kappa'?,True,1.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,0.0,0.0,0,1066,False,639, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,0.0,0.0,1,11066,False,214, delta = delta + delta. The value is: delta = delta + delta. The value is:,False,0.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,0.0,0.0,2,21066,False,586,  delta = key - value  The value is:  delta = key - value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,0.25,0.2432,0,1091,False,907, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,0.25,0.2432,1,11091,False,403, delta = key = delta. The value is: delta = key = delta. The value is:,False,0.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,0.25,0.2432,2,21091,False,547," key=phi maps to value=547. for no man, nor do they pause for human contempl",True,1.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,0.5,0.4863,0,1116,False,687, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,0.5,0.4863,1,11116,False,646, delta = key - (delta - key) = delta - key = delta - key = delta -,False,0.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,0.5,0.4863,2,21116,False,221, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,0.75,0.7295,0,1141,False,244, key=kappa maps to value=244. aspirational. The autumn leaves drifted silently o,True,1.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,0.75,0.7295,1,11141,False,878, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,0.75,0.7295,2,21141,False,198, key=omega maps to value=198. brown fox jumps over the lazy dog in the tranquil,True,1.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,1.0,0.9727,0,1166,False,157, key=delta maps to value=157.  What value does key=delta map to?,True,1.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,1.0,0.9727,1,11166,False,380, key=phi maps to value=380.  What is the value of key=phi?,True,1.0,SUCCESS
+Mamba-370M,associative_recall,1024,1024,1.0,0.9727,2,21166,False,204, key=sigma maps to value=204.  What value does key 'sigma' map to,True,1.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,0.0,0.0,0,2090,False,735,  The value is:  The value is:  The value is:  ,False,0.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,0.0,0.0,1,12090,False,728, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,0.0,0.0,2,22090,False,860, delta. The value is: delta. The value is: delta. The value is: delta.,False,0.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,0.25,0.2466,0,2115,False,687, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,0.25,0.2466,1,12115,False,134, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,0.25,0.2466,2,22115,False,963,  omega = 1.0  The value is:  omega = 1.0,False,0.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,0.5,0.4932,0,2140,False,662,  The value is:  The value is:  The value is:  ,False,0.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,0.5,0.4932,1,12140,False,419, the value of the key. The value of the key is the value of the key. The value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,0.5,0.4932,2,22140,False,349, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,0.75,0.7397,0,2165,False,696, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,0.75,0.7397,1,12165,False,367, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,0.75,0.7397,2,22165,False,431, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,1.0,0.9863,0,2190,False,472, key=psi maps to value=472.  What value does key 'psi' map to,True,1.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,1.0,0.9858,1,12190,False,739, key=omega maps to value=739.  What value does key 'omega' map,True,1.0,SUCCESS
+Mamba-370M,associative_recall,2048,2048,1.0,0.9858,2,22190,False,845, key=phi maps to value=845.  The value is: key=phi maps,True,1.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,0.0,0.0,0,4138,True,281, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,0.0,0.0,1,14138,True,567, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,0.0,0.0,2,24138,True,492, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,0.25,0.2483,0,4163,True,835, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,0.25,0.2483,1,14163,True,715, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,0.25,0.2483,2,24163,True,973, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,0.5,0.4966,0,4188,True,589, delta = (key - value) / (key - value)  The value is: delta,False,0.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,0.5,0.4966,1,14188,True,778, the value of the key is the value of the value of the key. The value of the key,False,0.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,0.5,0.4966,2,24188,True,229, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,0.75,0.7446,0,4213,True,579, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,0.75,0.7449,1,14213,True,439, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,0.75,0.7449,2,24213,True,317, the value of the key. The value of the key is the value of the key. The value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,1.0,0.9929,0,4238,True,795,  lambda = key = lambda = key = lambda = key = lambda = key = lambda =,False,0.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,1.0,0.9932,1,14238,True,145,  lambda = key(lambda x: x)  lambda is a function that takes a,False,0.0,SUCCESS
+Mamba-370M,associative_recall,4096,4096,1.0,0.9929,2,24238,True,943,  lambda = key = lambda = key = lambda = key = lambda  The value is,False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,0.0,0.0,0,8234,True,216, the value of the key is the key. The key is the key. The key is the key,False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,0.0,0.0,1,18234,True,453, the value of the key 'psi' is the value of the 'key'  The key,False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,0.0,0.0,2,28234,True,964, the key is the key. The key is the key. The key is the key. The key,False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,0.25,0.2491,0,8259,True,984, value = energy. The value of energy is the sum of all the things that it can do,False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,0.25,0.2491,1,18259,True,724, the key is the key. The key is the key. The key is the key. The key,False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,0.25,0.2491,2,28259,True,376, the value of the key is the value of the 'lambda'  The key is the key,False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,0.5,0.4983,0,8284,True,406, the value of the key is the key. The value of the key is the key. The key,False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,0.5,0.4983,1,18284,True,344, the value of the key is the value of the key. The value of the key is the value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,0.5,0.4983,2,28284,True,969, the key 'psi' maps to value. The key 'psi' maps to value. Key ',False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,0.75,0.7474,0,8309,True,420, the key is the key. The key is the key. The key is the key. The key,False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,0.75,0.7474,1,18309,True,111, the key is the key. The key is the key. The key is the key. The key,False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,0.75,0.7473,2,28309,True,936, key=kappa maps to value=computational efficiency. value=kappa=the number of tim,False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,1.0,0.9965,0,8334,True,821, the value of the key. The value of the key is the value of the key. The value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,1.0,0.9966,1,18334,True,993, the value of the key. The value of the key is the value of the key. The value,False,0.0,SUCCESS
+Mamba-370M,associative_recall,8192,8192,1.0,0.9966,2,28334,True,688, the value of the key. The value of the key is the value of the key. The value,False,0.0,SUCCESS

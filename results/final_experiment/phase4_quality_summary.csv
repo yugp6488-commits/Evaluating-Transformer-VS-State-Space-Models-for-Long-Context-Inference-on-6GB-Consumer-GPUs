@@ -1,0 +1,3 @@
+Model,Dataset,Num_Samples,Max_Length,Stride,Total_Scored_Tokens,Total_Scored_UTF8_Bytes,Total_Text_UTF8_Bytes,Chunks_Scored,Chunks_OOM_Skipped,Perplexity,BPB,Total_NLL_nats,Avg_NLL_per_token,Strict_VRAM_Cap_MB,Within_Allocator_Cap
+Pythia-410M,PG-19 (test),10,2048,512,64494,248843,248870,101,0,15.6815,1.0292,177518.5043,2.7525,5800.0,True
+Mamba-370M,PG-19 (test),10,2048,512,64494,248843,248870,101,0,14.0425,0.9879,170398.8316,2.6421,5800.0,True
