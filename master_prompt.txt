@@ -1,0 +1,632 @@
+<USER_REQUEST>
+# MASTER TASK: FINAL SCIENTIFIC AUDIT, METHODOLOGY CORRECTION, VALIDATION AND COMPLETION OF THE TRANSFORMER VS. MAMBA RESEARCH PROJECT
+
+You are working on an IEEE research project:
+
+**"Evaluating Transformer and State Space Models for Long-Context Inference on 6GB Consumer GPUs"**
+
+This is an empirical research study comparing:
+
+- Transformer: `EleutherAI/pythia-410m`
+- State Space Model: `state-spaces/mamba-370m`
+
+Target hardware:
+- NVIDIA RTX 3050 Laptop GPU, 6GB dedicated VRAM
+- CUDA-enabled WSL2 Ubuntu environment
+- PyTorch FP32 inference
+- Batch size and sequence lengths defined in the experiment configuration
+
+The project already contains scripts, raw CSVs, validated smoke-test CSVs, documentation, visualizations, and BPB correction work.
+
+## MOST IMPORTANT INSTRUCTION
+
+Do not perform another cycle of superficial fixes followed by a success report.
+
+Conduct a complete, evidence-based audit of the existing repository. Identify all methodological, mathematical, implementation, data-integrity, reproducibility, and documentation problems.
+
+Implement the necessary corrections in a controlled manner, run tests, and execute the full experiments only after the methodology passes validation.
+
+A script exiting with code 0 is NOT proof of scientific correctness.
+
+A smoke test is NOT a completed experiment.
+
+Never fabricate, infer, silently repair, or substitute experimental measurements.
+
+Do not ask the researcher to repeatedly approve individual obvious corrections. Use scientific judgment, document decisions, and complete the work systematically.
+
+---
+
+# STAGE 1 — COMPLETE REPOSITORY AUDIT
+
+Inspect the entire project, including:
+
+- `run_benchmark.py`
+- `benchmark/benchmark_decode.py`
+- `benchmark/benchmark_batch.py`
+- `benchmark/system_monitor.py`
+- `evaluation/bits_per_byte.py`
+- `evaluation/evaluate_quality.py`
+- `evaluation/evaluate_retrieval.py`
+- `analysis/visualization.py`
+- `config/experiments.yaml`
+- `config/models.yaml`
+- `IMPLEMENTATION.md`
+- `RESEARCH_LIMITATIONS.md`
+- All CSV files
+- All test files
+- All experiment runner scripts
+
+Create `FINAL_AUDIT_REPORT.md`.
+
+For every issue, record:
+
+1. File and function.
+2. Exact problem.
+3. Why it is scientifically or technically problematic.
+4. Required correction.
+5. Validation method.
+6. Final status.
+
+Classify issues as:
+- Critical: invalidates a measurement or conclusion.
+- Major: affects reproducibility or interpretation.
+- Minor: documentation, presentation, or maintainability.
+
+Do not modify the original raw data during this audit.
+
+## Existing data classification
+
+Preserve these directories:
+
+- `results/raw/`
+- `results/smoke_test_run1_backup/`
+- `results/smoke_test_run2_backup/`
+- `results/smoke_test_run3_backup/`
+- `results/validated_results/`
+
+Treat old raw results as legacy data until independently validated.
+
+Treat one-configuration smoke tests as smoke tests, never as complete experiments.
+
+Do not combine legacy results and new results without explicit provenance and validation.
+
+---
+
+# STAGE 2 — CORRECT BPB AND LANGUAGE-MODELLING EVALUATION
+
+Inspect and correct:
+
+- `evaluation/bits_per_byte.py`
+- `evaluation/evaluate_quality.py`
+- `tests/test_bpb_byte_alignment.py`
+
+The new `TokenizerByteMapper` approach is promising, but it must be verified in the actual evaluation path.
+
+## A. Exact byte reconstruction
+
+For every evaluation document:
+
+1. Preserve the exact normalized source text.
+2. Encode the source text as UTF-8.
+3. Tokenize that same text using the exact tokenizer configuration used for model evaluation.
+4. Map the actual token IDs to their raw byte sequences.
+5. Reconstruct the complete original byte sequence.
+6. Require bit-for-bit equality.
+
+If exact reconstruction fails, BPB must be reported as unavailable.
+
+Do not estimate or approximate byte counts.
+
+Inspect special tokens, added tokens, tokenizer-specific behaviour, whitespace handling, Unicode and byte fallback behaviour.
+
+## B. First-token discrepancy
+
+The previous report claimed that the first token `The` contributed two bytes.
+
+UTF-8 `The` is three bytes.
+
+Investigate this discrepancy directly.
+
+Print:
+- First token ID.
+- Vocabulary representation.
+- Mapped raw byte sequence.
+- Exact byte length.
+- Original text's first bytes.
+- Whether a BOM or other prefix exists.
+
+Explain the reported difference between 25,000 total bytes and 24,998 scored bytes.
+
+Correct all misleading explanations.
+
+## C. Actual NLL and byte-denominator alignment
+
+The current preflight validator uses mock NLL values. It cannot independently establish correctness of the actual model-evaluation numerator.
+
+Build an integration test using a deterministic small causal language model or controlled logits.
+
+Verify that:
+
+- The same target token positions contribute to NLL and byte counts.
+- Token zero is not scored when it is used only as initial context.
+- Overlapping context tokens contribute neither NLL nor bytes.
+- Every successfully evaluated target is scored exactly once.
+- Every skipped target is recorded.
+- The concatenated bytes of successfully scored targets correspond exactly to their original document byte spans.
+- BPB uses only the bytes corresponding to the NLL actually included.
+
+Use the formula:
+
+BPB = total_NLL_nats / (total_scored_UTF8_bytes * ln(2))
+
+Do not calculate BPB from an approximate decoded text string.
+
+## D. OOM handling
+
+The simulated OOM implementation and actual OOM implementation currently handle `prev_end` differently.
+
+Make their semantics consistent.
+
+For each document, record:
+- Total target tokens.
+- Successfully scored target tokens.
+- Skipped target tokens.
+- Duplicate target indices, if any.
+- Successfully scored bytes.
+- Skipped bytes.
+- Number of successful chunks.
+- Number of skipped chunks.
+
+Verify that an OOM cannot silently cause duplicate scoring or incorrectly attributed byte counts.
+
+If a chunk is skipped, clearly document whether its target tokens are entirely excluded or later recovered by another valid window.
+
+Do not claim that all text was evaluated when some targets were skipped.
+
+## E. PG-19 evaluation
+
+Use the authentic PG-19 test split.
+
+If the dataset is unavailable, stop and report the problem. Do not silently substitute synthetic data.
+
+Evaluate both models using:
+- The same source documents.
+- The same document normalization.
+- The same maximum context length.
+- The same stride.
+- The same target-text coverage policy.
+
+Run the configured number of samples.
+
+Save per-document results and aggregate results.
+
+Report:
+- PPL per model.
+- BPB per model, only when exact byte alignment is verified.
+- Total NLL.
+- Scored tokens.
+- Scored UTF-8 bytes.
+- Total source bytes.
+- Scored-token coverage.
+- OOM-skipped chunks.
+- Dataset identifier and split.
+
+Raw PPL values across different tokenizers must not be presented as directly comparable architecture-quality scores.
+
+---
+
+# STAGE 3 — PHASE 1 PREFILL AND MEMORY VALIDATION
+
+Inspect `run_benchmark.py` and the existing Phase 1 CSVs.
+
+Use `hardware_results_strict6gb.csv` as the primary constrained-memory evidence, subject to independent validation.
+
+Preserve `hardware_results.csv` as a separate legacy baseline.
+
+The original baseline reports Pythia at 8192 tokens using 6326.44 MB, which exceeds the nominal 6144 MB physical VRAM capacity.
+
+The strict run records an OOM at this configuration.
+
+Do not silently merge these observations.
+
+Verify:
+- FP32 precision.
+- Batch size.
+- Sequence lengths.
+- Warm-up policy.
+- Number of timed repetitions.
+- CUDA synchronization.
+- Peak allocated memory.
+- Peak reserved memory.
+- Persistent inference-state allocation.
+- Logical tensor size.
+- Latency mean and standard deviation.
+- OOM handling.
+
+Clearly distinguish:
+1. PyTorch allocated memory.
+2. PyTorch reserved memory.
+3. Dedicated physical GPU memory.
+4. Shared system memory.
+
+The 5800 MB PyTorch allocator ceiling is not a hard cap on all physical GPU allocations.
+
+Never claim it guarantees total physical GPU usage remains below 6144 MB.
+
+Use precise labels and report the limitations.
+
+For Transformer KV-cache complexity, distinguish:
+- KV-cache storage: linear in sequence length.
+- Full self-attention computation: quadratic in sequence length for standard full attention.
+
+For Mamba, describe the fixed-size recurrent inference state accurately. Do not claim that total prefill computation or total peak memory is universally constant with sequence length.
+
+---
+
+# STAGE 4 — COMPLETE PHASE 2: AUTOREGRESSIVE DECODING
+
+Inspect and correct `benchmark/benchmark_decode.py`.
+
+Run both models across all configured prefill lengths.
+
+Use the same:
+- Precision.
+- Batch size.
+- Generation length.
+- Decoding configuration.
+- Warm-up policy.
+- Number of repetitions.
+
+Freeze the generation length in the experiment configuration. Resolve the existing discrepancy between 50-token configuration and 128-token smoke-test settings.
+
+Measure separately:
+- Prefill latency.
+- Per-token autoregressive decoding latency.
+- Decode throughput.
+- Peak allocated memory.
+- Peak reserved memory.
+- Total generated tokens.
+- Latency variability.
+
+Ensure model loading is excluded from inference timing.
+
+Ensure the timing measures actual autoregressive generation rather than a single full-sequence forward pass.
+
+Synchronize CUDA correctly.
+
+Document whether first-token latency is included in the reported decode metric.
+
+Do not describe prefill milliseconds per input token as generated-token latency.
+
+Save raw repeated measurements and aggregate statistics.
+
+---
+
+# STAGE 5 — COMPLETE PHASE 3: BATCH SCALING
+
+Inspect and correct `benchmark/benchmark_batch.py`.
+
+Run both models across all configured batch sizes and sequence lengths.
+
+For each configuration, record:
+- Model.
+- Batch size.
+- Sequence length.
+- Peak allocated VRAM.
+- Peak reserved VRAM.
+- Static weight memory.
+- Additional memory overhead.
+- Persistent inference state.
+- Logical state size.
+- Latency.
+- Latency standard deviation.
+- Throughput.
+- OOM status.
+
+Verify that throughput uses a clearly documented definition.
+
+Preserve OOM as an explicit result.
+
+Never replace failed configurations with zero.
+
+Ensure failed configurations do not contaminate subsequent measurements.
+
+Do not claim a configuration fits within 6GB merely because it is below the PyTorch allocator ceiling. Label the measurement according to what was actually instrumented.
+
+---
+
+# STAGE 6 — COMPLETE PHASE 5: LONG-CONTEXT RETRIEVAL
+
+Inspect and correct `evaluation/evaluate_retrieval.py`.
+
+Evaluate both models on all configured tasks:
+
+1. Passkey retrieval.
+2. Needle-in-a-Haystack.
+3. Associative recall.
+
+Use all configured context lengths, target positions, and trials.
+
+Ensure the final token sequence is constructed directly from the intended token IDs.
+
+Assert that the actual model input length equals the requested length.
+
+Do not use character-count heuristics as a substitute for exact token-length construction.
+
+For every trial, preserve:
+- Requested context length.
+- Actual processed token count.
+- Requested needle position.
+- Actual needle position.
+- Task.
+- Trial seed.
+- Expected answer.
+- Predicted answer.
+- Exact-match result.
+- Validity status.
+
+Calculate accuracy as:
+
+successful valid trials / total valid trials
+
+Report invalid trials separately.
+
+Do not use `any()` across trials to produce a success rate.
+
+Mark Mamba contexts beyond its 2048-token training context as extrapolation.
+
+Do not claim synthetic retrieval performance establishes general long-document comprehension.
+
+---
+
+# STAGE 7 — REPRODUCIBILITY AND CONFIGURATION FREEZE
+
+Create one authoritative experiment configuration.
+
+Remove contradictory values across:
+- YAML configuration.
+- Python constants.
+- Runner scripts.
+- Documentation.
+
+Freeze:
+- Model identifiers.
+- Tokenizer identifiers.
+- Precision.
+- Batch sizes.
+- Context lengths.
+- Generation length.
+- Warm-up count.
+- Repetition count.
+- Dataset and split.
+- PG-19 sample count.
+- Retrieval tasks.
+- Retrieval positions.
+- Retrieval trials.
+- Random seeds.
+- OOM policy.
+
+Capture actual runtime metadata:
+- Python.
+- PyTorch.
+- CUDA.
+- cuDNN.
+- Transformers.
+- Mamba-SSM.
+- GPU model.
+- GPU-reported memory.
+- OS and WSL version.
+- System RAM.
+- CPU information.
+
+Do not copy environment versions from documentation when the runtime reports different versions.
+
+Generate:
+- `experiment_config_frozen.yaml`
+- `environment_metadata.csv`
+- `RUN_MANIFEST.md`
+
+Record source-code version or Git commit hash where available.
+
+Record checksums for frozen configuration and final result files.
+
+Do not change methodology during the full run without creating a new experiment version.
+
+---
+
+# STAGE 8 — TESTING AND VALIDATION GATE
+
+Before full experiments, execute:
+
+1. Syntax checks for every Python script.
+2. BPB byte-mapping unit tests.
+3. Unicode and whitespace reconstruction tests.
+4. Sliding-window target-partition tests.
+5. Simulated OOM tests.
+6. Actual NLL and byte-denominator integration tests.
+7. Retrieval exact-length tests.
+8. Retrieval trial aggregation tests.
+9. Decode timing tests.
+10. Batch-scaling OOM tests.
+11. CSV schema and integrity tests.
+12. Configuration consistency checks.
+
+Create `FINAL_VALIDATION_REPORT.md`.
+
+The report must list every test, its result, and the evidence.
+
+Do not proceed to full experiments if a critical scientific validation fails.
+
+Do not claim a test passed unless it was actually executed.
+
+---
+
+# STAGE 9 — EXECUTE THE COMPLETE EXPERIMENTS
+
+After the validation gate passes, execute all configured experiments for both models.
+
+Run:
+- Phase 1: Prefill, latency and memory.
+- Phase 2: Autoregressive decoding.
+- Phase 3: Batch scaling.
+- Phase 4: PG-19 quality evaluation and BPB.
+- Phase 5: Long-context retrieval.
+
+Use the frozen configuration.
+
+Save all repeated raw measurements.
+
+Do not overwrite historical results.
+
+Use a new final experiment directory, for example:
+
+`results/final_experiment/`
+
+Suggested structure:
+
+- `phase1_prefill.csv`
+- `phase2_decode.csv`
+- `phase3_batch.csv`
+- `phase4_quality_per_document.csv`
+- `phase4_quality_summary.csv`
+- `phase5_retrieval_trials.csv`
+- `phase5_retrieval_summary.csv`
+- `environment_metadata.csv`
+- `experiment_config.yaml`
+- `run_manifest.md`
+
+If any configuration fails, record the failure and reason.
+
+Do not fabricate missing results or silently skip a model.
+
+If a model cannot run, report the exact technical limitation.
+
+---
+
+# STAGE 10 — INDEPENDENT RESULT VALIDATION
+
+After all experiments finish, independently read the exported CSVs.
+
+Recalculate:
+- Means.
+- Standard deviations.
+- Throughput.
+- Per-token latency.
+- PPL.
+- BPB.
+- Retrieval accuracy.
+- Memory growth.
+- OOM counts.
+- Coverage.
+
+Verify that:
+- Every configured model and configuration is represented.
+- No duplicate experiment rows exist.
+- OOM records are preserved.
+- Missing measurements are explicit.
+- All figures use final validated data.
+- All reported values can be traced to raw measurements.
+
+Create `FINAL_RESULTS_AUDIT.md`.
+
+Do not rely on the benchmark scripts' printed summaries as the sole validation source.
+
+---
+
+# STAGE 11 — FIGURES AND RESEARCH DOCUMENTATION
+
+Only after final result validation, regenerate publication-quality figures.
+
+Figures should include, where supported by actual data:
+
+1. Peak allocated memory versus sequence length.
+2. Persistent inference-state memory versus sequence length.
+3. Prefill latency versus sequence length.
+4. Prefill throughput versus sequence length.
+5. Decode latency versus prefill length.
+6. Decode throughput versus prefill length.
+7. Batch throughput versus batch size.
+8. Batch memory versus batch size.
+9. PG-19 PPL and BPB comparisons.
+10. Retrieval accuracy versus context length.
+11. Retrieval accuracy versus target position.
+12. Retrieval heatmaps.
+
+Do not create misleading figures when a phase has incomplete data.
+
+Include units, error bars where repeated measurements support them, clear legends, and accurate captions.
+
+Update:
+- `IMPLEMENTATION.md`
+- `RESEARCH_LIMITATIONS.md`
+- `FINAL_AUDIT_REPORT.md`
+- `FINAL_VALIDATION_REPORT.md`
+- `FINAL_RESULTS_AUDIT.md`
+
+Keep the distinction between:
+- Measured results.
+- Theoretical complexity.
+- Interpretations.
+- Limitations.
+- Uncompleted experiments.
+
+---
+
+# SCIENTIFIC RESTRICTIONS
+
+These rules are mandatory:
+
+1. Do not claim models were trained on the RTX 3050. The study evaluates pretrained models on that GPU.
+2. Do not claim Mamba universally outperforms Transformers.
+3. Do not attribute every difference solely to architecture. Model size, training history, tokenizer and implementation are potential confounders.
+4. Do not directly compare raw PPL across different tokenizers as equivalent quality measurements.
+5. Do not report approximate BPB as exact BPB.
+6. Do not claim shared GPU memory is additional physical VRAM.
+7. Do not confuse PyTorch allocated memory with total physical GPU usage.
+8. Do not confuse KV-cache memory complexity with attention computation complexity.
+9. Do not describe Mamba recurrent-state storage as total inference memory.
+10. Do not describe prefill latency per token as autoregressive decode latency.
+11. Do not present one-trial smoke-test accuracy as a reliable retrieval result.
+12. Do not present smoke-test CSVs as completed experimental evidence.
+13. Do not silently replace authentic PG-19 data with synthetic text.
+14. Do not hide failed configurations or OOM events.
+15. Do not modify historical raw CSVs.
+
+---
+
+# FINAL DELIVERABLES
+
+At the end, provide:
+
+1. `FINAL_AUDIT_REPORT.md`
+2. `FINAL_VALIDATION_REPORT.md`
+3. `FINAL_RESULTS_AUDIT.md`
+4. `RUN_MANIFEST.md`
+5. Frozen experiment configuration.
+6. Environment metadata.
+7. Complete validated CSVs for all phases.
+8. Regenerated publication-quality figures.
+9. Updated implementation and limitations documentation.
+
+Also provide a concise final summary containing:
+
+- Critical issues discovered.
+- Corrections implemented.
+- Tests executed and results.
+- Full experiments completed.
+- Configurations that failed.
+- Final validated result locations.
+- Remaining limitations.
+- Whether the project is ready for IEEE paper analysis.
+
+## FINAL RULE
+
+Do not tell the researcher that the project is complete merely because the code has been edited or smoke tests have passed.
+
+The project is complete only when the methodology is validated, full experiments have actually run, exported data has been independently checked, and all remaining limitations are honestly documented.
+
+If the environment, hardware, dataset availability, or execution time prevents completion, state exactly what remains. Never invent completion.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-15T15:28:29+05:30.
+</ADDITIONAL_METADATA>

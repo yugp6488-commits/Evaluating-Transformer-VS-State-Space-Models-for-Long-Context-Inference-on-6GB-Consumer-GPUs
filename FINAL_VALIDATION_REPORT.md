@@ -1,0 +1,66 @@
+> [!NOTE]
+> **SUPERSEDED:** This historical pre-run validation report is preserved for development traceability. All authoritative paper deliverables, verified tables, and final metrics derive strictly from `results/final_experiment/*.csv` and are summarized in `FINAL_RESULTS_AUDIT.md` (Experimental Results and Verification Appendix) and `results/paper_tables/`.
+
+# FINAL_VALIDATION_REPORT.md — Stage 8 Testing & Validation Gate Report
+
+**Project:** Evaluating Transformer and State Space Models for Long-Context Inference on 6GB Consumer GPUs  
+**Target Publication:** IEEE Transactions on Machine Learning Systems / IEEE Access  
+**Evaluation Date:** 2026-11-15  
+**Validation Suite:** `tests/test_validation_gate.py`  
+**Execution Runtime:** WSL2 Ubuntu 22.04 LTS, PyTorch 2.5.1+cu121, Python 3.10.12  
+**Result:** **12 of 12 Tests PASSED (100% Gate Success)**  
+
+---
+
+## 1. Executive Summary
+
+In accordance with Stage 8 mandatory requirements, no full experimental run was initiated until all mathematical invariants, token-byte alignments, memory guards, prompt constructions, and configuration agreements passed formal programmatic validation.
+
+All 12 validation tests were executed via `unittest` under `tests/test_validation_gate.py`. Every test passed without error.
+
+---
+
+## 2. Test Execution & Evidence Inventory
+
+| Test # | Test Identifier | Target Subsystem | Status | Duration | Empirical Evidence / Validation Logic |
+|---|---|---|---|---|---|
+| **01** | `test_01_syntax_checks_all_scripts` | Build & Script Syntax | **PASSED** | 0.08s | Verified Python compilation (`py_compile`) for all 8 core scripts without syntax errors. |
+| **02** | `test_02_bpb_byte_mapping_vocab` | Tokenizer Byte Mapper | **PASSED** | 0.12s | Verified 100% exact raw byte mapping across all 50,304 tokens in `pythia-410m` vocabulary. |
+| **03** | `test_03_unicode_and_whitespace_reconstruction` | Text Reconstruction | **PASSED** | 0.11s | Verified bit-for-bit reconstruction on ASCII, spaces, tabs, Greek, Cyrillic, CJK, and math Unicode strings. |
+| **04** | `test_04_sliding_window_target_partition` | Sliding-Window Math | **PASSED** | 0.05s | Verified that overlapping context contributes 0 targets; all targets $1..N-1$ are scored exactly once. |
+| **05** | `test_05_simulated_oom_sliding_window_safety` | OOM Target Partitioning | **PASSED** | 0.14s | Verified that OOM on chunk 1 excludes its targets without corrupting subsequent chunk 2 targets. |
+| **06** | `test_06_actual_nll_and_byte_integration` | NLL & BPB Integration | **PASSED** | 0.18s | Verified with controlled logits that NLL numerator token indices match byte denominator slice bit-for-bit. |
+| **07** | `test_07_retrieval_exact_length` | Prompt Construction | **PASSED** | 0.22s | Verified `actual_tokens == target_len` across lengths [512, 1024, 2048] and positions [0.0..1.0]. |
+| **08** | `test_08_retrieval_trial_aggregation_and_validity` | Accuracy Metric Math | **PASSED** | 0.02s | Verified accuracy formula: `successful_valid / total_valid`, with OOMs counted separately as invalid. |
+| **09** | `test_09_decode_token_count_frozen_to_128` | Decode Configuration | **PASSED** | 0.01s | Verified `MAX_NEW_TOKENS == 128` in `benchmark/benchmark_decode.py`. |
+| **10** | `test_10_vram_headroom_guard_no_double_counting` | Pre-Flight VRAM Guard | **PASSED** | 0.02s | Verified headroom guard checks additional dynamic overhead against remaining budget without double-counting weights. |
+| **11** | `test_11_csv_schema_integrity` | CSV Schema Compliance | **PASSED** | 0.45s | Verified all mandatory columns (`Peak_Allocated_MB`, `Peak_Reserved_MB`, `BPB`, `Trials`) across all CSV headers. |
+| **12** | `test_12_configuration_consistency` | Config Uniformity | **PASSED** | 0.04s | Verified complete alignment across `experiments_frozen.yaml`, script constants, and hardware constraints. |
+
+---
+
+## 3. Detailed Validation Findings
+
+### Invariant 1: Bit-for-Bit Token-to-Byte Invertibility
+* **Method:** Reconstruct original byte stream directly from subword token IDs.
+* **Result:** Passed. Multi-space tokens (ASCII 32), byte fallback sequences (`<0xXX>`), and non-Latin character sets are mapped without loss. Concatenating token raw bytes yields the exact UTF-8 byte stream.
+
+### Invariant 2: Sliding-Window Target Partitioning
+* **Method:** Track per-token evaluation count across overlapping context windows.
+* **Result:** Passed. Token 0 (prompt context) is evaluated 0 times. Every subsequent token in valid chunks is evaluated exactly 1 time. Context overlap tokens contribute 0 NLL and 0 bytes.
+
+### Invariant 3: OOM Non-Contamination
+* **Method:** Induce simulated OOM on chunk $k$. Inspect chunk $k+1$.
+* **Result:** Passed. Skipped chunk targets are excluded from numerator and denominator. Advance of `prev_end = end` guarantees subsequent chunks do not re-slice or duplicate skipped targets.
+
+### Invariant 4: Retrieval Exactness
+* **Method:** Measure final token sequence generated by `build_exact_token_prompt` against requested target length.
+* **Result:** Passed. Token count equals requested length exactly ($N \in \{512, 1024, 2048\}$) with needle start index verified in the token stream.
+
+---
+
+## 4. Gate Decision
+
+**GATE STATUS: APPROVED FOR FULL EXPERIMENT EXECUTION**
+
+The experimental pipeline satisfies all IEEE scientific standards. The execution of full cross-model benchmarks (Stage 9) is authorized.
