@@ -9,7 +9,7 @@
 ## 1. Experimental Setup & Hardware Environment
 
 All benchmarks are tailored for reproducible execution on memory-constrained consumer hardware, specifically targeting laptop workstations equipped with 6GB GDDR6 dedicated VRAM under Windows Subsystem for Linux (WSL2).
-
+ 
 ### System & Hardware Specifications
 | Specification | Value | Context & Research Relevance |
 |---|---|---|
