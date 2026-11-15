@@ -1,6 +1,6 @@
 > [!NOTE]
 > **SUPERSEDED:** This historical audit report is preserved for development traceability. All authoritative paper deliverables, verified tables, and final metrics derive strictly from `results/final_experiment/*.csv` and are summarized in `FINAL_RESULTS_AUDIT.md` (Experimental Results and Verification Appendix) and `results/paper_tables/`.
-
+  
 # FINAL_AUDIT_REPORT.md — Scientific, Mathematical & Implementation Audit
 
 **Project:** Evaluating Transformer and State Space Models for Long-Context Inference on 6GB Consumer GPUs  
