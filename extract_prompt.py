@@ -10,3 +10,4 @@ with open(transcript_path, "r", encoding="utf-8") as f:
             with open(r"E:\New\master_prompt.txt", "w", encoding="utf-8") as out:
                 out.write(content)
             print("Wrote master prompt to E:\\New\\master_prompt.txt, len:", len(content))
+   
