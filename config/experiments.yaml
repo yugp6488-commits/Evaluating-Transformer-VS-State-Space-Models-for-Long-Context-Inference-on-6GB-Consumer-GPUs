@@ -1,0 +1,57 @@
+# =============================================================================
+# Experiment Configuration — IEEE Benchmark Study
+# "Evaluating Transformer and State Space Models for Long-Context Inference
+#  on 6GB Consumer GPUs"
+# =============================================================================
+
+hardware:
+  gpu_target: "NVIDIA RTX 3050 Laptop (6GB VRAM)"
+  vram_limit_mb: 6144
+  system_ram_gb: 16
+  os: "WSL2 Ubuntu 22.04 on Windows 11"
+  cuda_version: "12.1"
+  env_vars:
+    OMP_NUM_THREADS: 4  # Critical for WSL2: prevents OpenMP CPU thread over-subscription
+
+benchmark:
+  sequence_lengths: [512, 1024, 2048, 4096, 8192]
+  batch_sizes: [1, 2, 4]
+  precision: "float32"
+  repeats: 3
+  shape_warmups: 1
+  device: "cuda"
+
+decoding:
+  max_new_tokens: 50
+  batch_size: 1
+  temperature: 1.0
+  top_k: 0
+  top_p: 1.0
+  repetition_penalty: 1.0
+
+evaluation:
+  quality:
+    dataset: "deepmind/pg19"
+    split: "test"
+    max_samples: 10
+    max_length: 2048
+    stride: 512
+  retrieval:
+    tasks: ["passkey", "needle_in_haystack", "associative_recall"]
+    sequence_lengths: [512, 1024, 2048, 4096, 8192]
+    positions: [0.0, 0.25, 0.50, 0.75, 1.0]
+    seed: 42
+    num_trials: 3
+    mamba_training_limit: 2048
+    max_new_tokens: 20
+
+output:
+  raw_dir: "results/raw"
+  graphs_dir: "results/graphs"
+  csv_files:
+    phase1: "hardware_results.csv"
+    phase2: "results/raw/decode_results.csv"
+    phase3: "results/raw/batch_scaling_results.csv"
+    phase4: "results/raw/quality_results.csv"
+    phase5: "results/raw/retrieval_results.csv"
+    system_metadata: "results/raw/system_metadata.csv"

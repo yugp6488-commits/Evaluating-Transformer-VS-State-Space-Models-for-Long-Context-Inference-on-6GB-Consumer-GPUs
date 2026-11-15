@@ -1,0 +1,104 @@
+# =============================================================================
+# FROZEN EXPERIMENT CONFIGURATION — IEEE Systems Research Benchmark
+# "Evaluating Transformer and State Space Models for Long-Context Inference
+#  on 6GB Consumer GPUs"
+# Authoritative Version: 1.0 (Frozen 2026-11-15)
+# =============================================================================
+
+metadata:
+  study_title: "Evaluating Transformer and State Space Models for Long-Context Inference on 6GB Consumer GPUs"
+  target_venue: "IEEE Transactions on Machine Learning Systems / IEEE Access"
+  date_frozen: "2026-11-15"
+  precision: "float32"
+  random_seed: 42
+
+hardware:
+  gpu_target: "NVIDIA GeForce RTX 3050 Laptop GPU"
+  physical_vram_mb: 6144.0
+  pytorch_allocator_cap_mb: 5800.0
+  pytorch_allocator_fraction: 0.9440
+  system_ram_gb: 16.0
+  os: "WSL2 Ubuntu 22.04 LTS on Windows 11"
+  env_vars:
+    OMP_NUM_THREADS: 4
+    MKL_NUM_THREADS: 4
+    TOKENIZERS_PARALLELISM: "false"
+    PYTHONUNBUFFERED: "1"
+
+models:
+  transformer:
+    name: "Pythia-410M"
+    hf_id: "EleutherAI/pythia-410m"
+    tokenizer_id: "EleutherAI/pythia-410m"
+    family: "transformer"
+    parameters: 405000000
+    layers: 24
+    hidden_size: 1024
+    attention_heads: 16
+    rotary_pct: 0.25
+    vocab_size: 50304
+    static_weight_memory_mb: 1650.38
+    state_complexity: "O(N) linear in sequence length N"
+
+  ssm:
+    name: "Mamba-370M"
+    hf_id: "state-spaces/mamba-370m"
+    tokenizer_id: "EleutherAI/gpt-neox-20b"
+    family: "ssm"
+    parameters: 370000000
+    layers: 48
+    d_model: 1024
+    d_state: 16
+    d_conv: 4
+    expand: 2
+    vocab_size: 50280
+    static_weight_memory_mb: 1425.35
+    state_complexity: "O(1) constant in sequence length N (~7.5 MB)"
+    training_context_limit: 2048
+
+phase1_prefill:
+  sequence_lengths: [512, 1024, 2048, 4096, 8192]
+  batch_sizes: [1]
+  repeats: 3
+  shape_warmups: 1
+  output_file: "phase1_prefill.csv"
+
+phase2_decode:
+  prefill_lengths: [512, 1024, 2048, 4096, 8192]
+  batch_size: 1
+  max_new_tokens: 128
+  repeats: 3
+  output_file: "phase2_decode.csv"
+
+phase3_batch:
+  sequence_lengths: [512, 1024, 2048, 4096, 8192]
+  batch_sizes: [1, 2, 4]
+  repeats: 3
+  shape_warmups: 1
+  output_file: "phase3_batch.csv"
+
+phase4_quality:
+  dataset: "emozilla/pg19"
+  split: "test"
+  max_samples: 10
+  max_length: 2048
+  stride: 512
+  sample_char_cap: 25000
+  output_files:
+    per_document: "phase4_quality_per_document.csv"
+    summary: "phase4_quality_summary.csv"
+
+phase5_retrieval:
+  tasks: ["passkey", "needle_in_haystack", "associative_recall"]
+  sequence_lengths: [512, 1024, 2048, 4096, 8192]
+  positions: [0.0, 0.25, 0.50, 0.75, 1.0]
+  num_trials: 3
+  seed: 42
+  max_new_tokens: 20
+  mamba_extrapolation_threshold: 2048
+  output_files:
+    trials: "phase5_retrieval_trials.csv"
+    summary: "phase5_retrieval_summary.csv"
+
+output_directory: "results/final_experiment"
+graphs_directory: "results/graphs"

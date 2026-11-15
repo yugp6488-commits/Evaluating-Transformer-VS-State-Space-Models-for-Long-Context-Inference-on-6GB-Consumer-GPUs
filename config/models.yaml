@@ -1,0 +1,52 @@
+# =============================================================================
+# Model Configuration — IEEE Benchmark Study
+# "Evaluating Transformer and State Space Models for Long-Context Inference
+#  on 6GB Consumer GPUs"
+# =============================================================================
+
+models:
+  pythia_410m:
+    name: "Pythia-410M"
+    hf_id: "EleutherAI/pythia-410m"
+    architecture: "Transformer (GPT-NeoX)"
+    family: "transformer"
+    parameters: 405_000_000
+    layers: 24
+    hidden_size: 1024
+    attention_heads: 16
+    rotary_pct: 0.25
+    vocab_size: 50304
+    max_position_embeddings: 2048
+    tokenizer: "EleutherAI/pythia-410m"
+    precision: "float32"
+    static_weight_memory_mb: 1650.38
+    state_scaling: "O(N) linear growth with context length N"
+    state_formula: "2 * num_layers * hidden_size * sizeof(float32) * seq_len * batch"
+    notes: >
+      Rotary position embeddings (RoPE). KV-cache grows linearly
+      with sequence length × num_layers × 2 (K+V) × hidden_size.
+      Trained on The Pile with a 2048-token context window.
+
+  mamba_370m:
+    name: "Mamba-370M"
+    hf_id: "state-spaces/mamba-370m"
+    architecture: "Selective State Space Model (S6)"
+    family: "ssm"
+    parameters: 370_000_000
+    layers: 48
+    d_model: 1024
+    d_state: 16
+    d_conv: 4
+    expand: 2
+    vocab_size: 50280
+    max_training_length: 2048
+    tokenizer: "EleutherAI/gpt-neox-20b"
+    precision: "float32"
+    static_weight_memory_mb: 1425.35
+    state_scaling: "O(1) constant with respect to context length N"
+    state_formula: "layers * ((d_model * expand * d_state) + (d_model * expand * d_conv)) * sizeof(float32) * batch"
+    notes: >
+      Fixed-size recurrent hidden state (d_model × d_state per layer).
+      State memory is O(1) with respect to sequence length.
+      Trained on The Pile with a 2048-token context window. Lengths >2048
+      are considered extrapolation and must be labelled accordingly.
